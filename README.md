@@ -1,5 +1,13 @@
 # Lua snippets
-## Lua language support for Visual Studio Code
-Base lua.sublime-snippet
+
+
+## Install
+
+![](images/install.png)
+
+
+## Usage
+
+![](images/usage.png)
 
 ** Enjoy!**
