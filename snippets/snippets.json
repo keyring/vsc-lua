@@ -35,10 +35,28 @@
 		"description": "local x = 1",
 		"scope": "source.lua"
 	},
+	"require": {
+		"prefix": "require",
+		"body": "require(\"${1:module}\")",
+		"description": "require()",
+		"scope": "source.lua"
+	},
 	"table.concat": {
 		"prefix": "table.concat",
 		"body": "table.concat( ${1:tablename}${2:, \", \"}${3:, start_index}${4:, end_index} )",
 		"description": "table.concat",
+		"scope": "source.lua"
+	},
+	"table.insert": {
+		"prefix": "table.insert",
+		"body": "table.insert( ${1:list},${2: [pos,]}${3: value} )",
+		"description": "table.insert",
+		"scope": "source.lua"
+	},
+	"table.remove": {
+		"prefix": "table.remove",
+		"body": "table.remove( ${1:list},${2: [pos,]} )",
+		"description": "table.remove",
 		"scope": "source.lua"
 	},
 	"table.sort": {
@@ -46,5 +64,210 @@
 		"body": "table.sort( ${1:tablename}${2:, sortfunction} )",
 		"description": "table.sort",
 		"scope": "source.lua"
-	}
+	},
+	"string.byte": {
+		"prefix": "string.byte",
+		"body": "string.byte( ${1:s}${2:[, i]}${3:[, j]} )",
+		"description": "string.byte",
+		"scope": "source.lua"
+	},
+	"string.char": {
+		"prefix": "string.char",
+		"body": "string.char( ${1:...} )",
+		"description": "string.char",
+		"scope": "source.lua"
+	},
+	"string.find": {
+		"prefix": "string.find",
+		"body": "string.find( ${1:s},${2:pattern}${3:[, init]}${4:[, plain]} )",
+		"description": "string.find",
+		"scope": "source.lua"
+	},
+	"string.format": {
+		"prefix": "string.format",
+		"body": "string.format( \"${1:formatstring}\",${2:...} )",
+		"description": "string.format",
+		"scope": "source.lua"
+	},	
+	"string.gmatch": {
+		"prefix": "string.gmatch",
+		"body": "string.gmatch( ${1:s},${2:pattern} )",
+		"description": "string.gmatch",
+		"scope": "source.lua"
+	},	
+	"string.gsub": {
+		"prefix": "string.gsub",
+		"body": "string.gsub( ${1:s},${2:pattern},${3:repl}${4:[, n]} )",
+		"description": "string.gsub",
+		"scope": "source.lua"
+	},
+	"string.sub": {
+		"prefix": "string.sub",
+		"body": "string.sub( ${1:s}, ${2:i}${3:[, j]} )",
+		"description": "string.sub",
+		"scope": "source.lua"
+	},
+	"string.len": {
+		"prefix": "string.len",
+		"body": "string.len( ${1:s} )",
+		"description": "string.len",
+		"scope": "source.lua"
+	},
+	"string.lower": {
+		"prefix": "string.lower",
+		"body": "string.lower( ${1:s} )",
+		"description": "string.lower",
+		"scope": "source.lua"
+	},
+	"string.match": {
+		"prefix": "string.match",
+		"body": "string.match( ${1:s},${2:pattern}${3:[, init]} )",
+		"description": "string.match",
+		"scope": "source.lua"
+	},
+	"string.upper": {
+		"prefix": "string.upper",
+		"body": "string.upper( ${1:s} )",
+		"description": "string.upper",
+		"scope": "source.lua"
+	},
+	"string.rep": {
+		"prefix": "string.rep",
+		"body": "string.rep( ${1:s}, ${2:n}${3:[, rep]} )",
+		"description": "string.rep",
+		"scope": "source.lua"
+	},
+	"string.reverse": {
+		"prefix": "string.reverse",
+		"body": "string.reverse( ${1:s} )",
+		"description": "string.reverse",
+		"scope": "source.lua"
+	},
+	"math.abs": {
+		"prefix": "math.abs",
+		"body": "math.abs( ${1:x} )",
+		"description": "math.abs",
+		"scope": "source.lua"
+	},
+	"math.acos": {
+		"prefix": "math.acos",
+		"body": "math.acos( ${1:x} )",
+		"description": "math.acos",
+		"scope": "source.lua"
+	},
+	"math.asin": {
+		"prefix": "math.asin",
+		"body": "math.asin( ${1:x} )",
+		"description": "math.asin",
+		"scope": "source.lua"
+	},
+	"math.ceil": {
+		"prefix": "math.ceil",
+		"body": "math.ceil( ${1:x} )",
+		"description": "math.ceil",
+		"scope": "source.lua"
+	},
+	"math.cos": {
+		"prefix": "math.cos",
+		"body": "math.cos( ${1:x} )",
+		"description": "math.cos",
+		"scope": "source.lua"
+	},
+	"math.deg": {
+		"prefix": "math.deg",
+		"body": "math.deg( ${1:x} )",
+		"description": "math.deg",
+		"scope": "source.lua"
+	},
+	"math.exp": {
+		"prefix": "math.exp",
+		"body": "math.exp( ${1:x} )",
+		"description": "math.exp",
+		"scope": "source.lua"
+	},
+	"math.floor": {
+		"prefix": "math.floor",
+		"body": "math.floor( ${1:x} )",
+		"description": "math.floor",
+		"scope": "source.lua"
+	},
+	"math.modf": {
+		"prefix": "math.modf",
+		"body": "math.modf( ${1:x} )",
+		"description": "math.modf",
+		"scope": "source.lua"
+	},
+	"math.math.randomseed": {
+		"prefix": "math.math.randomseed",
+		"body": "math.math.randomseed( ${1:x} )",
+		"description": "math.math.randomseed",
+		"scope": "source.lua"
+	},
+	"math.sin": {
+		"prefix": "math.sin",
+		"body": "math.sin( ${1:x} )",
+		"description": "math.sin",
+		"scope": "source.lua"
+	},
+	"math.sqrt": {
+		"prefix": "math.sqrt",
+		"body": "math.sqrt( ${1:x} )",
+		"description": "math.sqrt",
+		"scope": "source.lua"
+	},
+	"math.tan": {
+		"prefix": "math.tan",
+		"body": "math.tan( ${1:x} )",
+		"description": "math.tan",
+		"scope": "source.lua"
+	},
+	"math.tointeger": {
+		"prefix": "math.tointeger",
+		"body": "math.tointeger( ${1:x} )",
+		"description": "math.tointeger",
+		"scope": "source.lua"
+	},
+	"math.type": {
+		"prefix": "math.type",
+		"body": "math.type( ${1:x} )",
+		"description": "math.type",
+		"scope": "source.lua"
+	},
+	"math.random": {
+		"prefix": "math.random",
+		"body": "math.random( ${1:[m]}${2:[, n]} )",
+		"description": "math.random",
+		"scope": "source.lua"
+	},
+	"math.log": {
+		"prefix": "math.log",
+		"body": "math.log( ${1:x}${2:[, base]} )",
+		"description": "math.log",
+		"scope": "source.lua"
+	},
+	"math.max": {
+		"prefix": "math.max",
+		"body": "math.max( ${1:x},${2:...} )",
+		"description": "math.max",
+		"scope": "source.lua"
+	},
+	"math.min": {
+		"prefix": "math.min",
+		"body": "math.min( ${1:x},${2:...} )",
+		"description": "math.min",
+		"scope": "source.lua"
+	},
+	"math.fmod": {
+		"prefix": "math.fmod",
+		"body": "math.fmod( ${1:x},${2:y} )",
+		"description": "math.fmod",
+		"scope": "source.lua"
+	},	
+	"math.atan": {
+		"prefix": "math.atan",
+		"body": "math.atan( ${1:y}${2:[, x]} )",
+		"description": "math.atan",
+		"scope": "source.lua"
+	},	
+		
 }
