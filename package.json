@@ -1,8 +1,10 @@
 {
 	"name": "Lua",
 	"description": "Lua language support for Visual Studio Code",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "keyring",
+	"icon": "images/logo.png",
+	"license": "MIT",
 	"engines": {
 		"vscode": "^0.10.1"
 	},
@@ -16,5 +18,9 @@
 				"path": "./snippets/snippets.json"
 			}
 		]
-	}
+	},
+	"repository": {
+      "type": "git",
+      "url": "https://github.com/keyring/vsc-lua.git"
+  	}
 }
