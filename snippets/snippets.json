@@ -41,6 +41,73 @@
 		"description": "require()",
 		"scope": "source.lua"
 	},
+	"assert": {
+		"prefix": "assert",
+		"body": "assert(${1:v}${2:[, message]})",
+		"description": "assert()",
+		"scope": "source.lua"
+	},
+	"collectgarbage": {
+		"prefix": "collectgarbage",
+		"body": "collectgarbage(${1:[opt]}${2:[, arg]})",
+		"description": "collectgarbage()",
+		"scope": "source.lua"
+	},
+	"dofile": {
+		"prefix": "dofile",
+		"body": "dofile(${1:[filename]})",
+		"description": "dofile ([filename])",
+		"scope": "source.lua"
+	},
+	"getmetatable": {
+		"prefix": "getmetatable",
+		"body": "getmetatable(${1:object})",
+		"description": "getmetatable (object)",
+		"scope": "source.lua"
+	},
+	"next": {
+		"prefix": "next",
+		"body": "next(${1:table}${2:[, index]})",
+		"description": "next (table [, index])",
+		"scope": "source.lua"
+	},
+	"print": {
+		"prefix": "print",
+		"body": "print(${1:...})",
+		"description": "print(...)",
+		"scope": "source.lua"
+	},
+	"select": {
+		"prefix": "select",
+		"body": "select(${1:index}, ${2:...})",
+		"description": "select (index, ···)",
+		"scope": "source.lua"
+	},
+	"setmetatable": {
+		"prefix": "setmetatable",
+		"body": "setmetatable(${1:table}, ${2:metatable})",
+		"description": "setmetatable (table, metatable)",
+		"scope": "source.lua"
+	},
+	"tonumber": {
+		"prefix": "tonumber",
+		"body": "tonumber(${1:e}${2:[, base]})",
+		"description": "tonumber (e [, base])",
+		"scope": "source.lua"
+	},
+	"tostring": {
+		"prefix": "tostring",
+		"body": "tostring(${1:v})",
+		"description": "tostring (v)",
+		"scope": "source.lua"
+	},
+	"type": {
+		"prefix": "type",
+		"body": "type(${1:v})",
+		"description": "type (v)",
+		"scope": "source.lua"
+	},
+	
 	"table.concat": {
 		"prefix": "table.concat",
 		"body": "table.concat( ${1:tablename}${2:, \", \"}${3:, start_index}${4:, end_index} )",
@@ -65,6 +132,7 @@
 		"description": "table.sort",
 		"scope": "source.lua"
 	},
+	
 	"string.byte": {
 		"prefix": "string.byte",
 		"body": "string.byte( ${1:s}${2:[, i]}${3:[, j]} )",
@@ -143,6 +211,7 @@
 		"description": "string.reverse",
 		"scope": "source.lua"
 	},
+	
 	"math.abs": {
 		"prefix": "math.abs",
 		"body": "math.abs( ${1:x} )",
@@ -269,5 +338,47 @@
 		"description": "math.atan",
 		"scope": "source.lua"
 	},	
-		
+	
+	"coroutine.create": {
+		"prefix": "coroutine.create",
+		"body": "coroutine.create( ${1:function} )",
+		"description": "coroutine.create",
+		"scope": "source.lua"
+	},	
+	"coroutine.isyieldable": {
+		"prefix": "coroutine.isyieldable",
+		"body": "coroutine.isyieldable( )",
+		"description": "coroutine.isyieldable",
+		"scope": "source.lua"
+	},
+	"coroutine.resume": {
+		"prefix": "coroutine.resume",
+		"body": "coroutine.resume( ${1:co}${2:[, val1, ···]} )",
+		"description": "coroutine.resume",
+		"scope": "source.lua"
+	},	
+	"coroutine.running": {
+		"prefix": "coroutine.running",
+		"body": "coroutine.running( )",
+		"description": "coroutine.running",
+		"scope": "source.lua"
+	},
+	"coroutine.status": {
+		"prefix": "coroutine.status",
+		"body": "coroutine.status( ${1:co} )",
+		"description": "coroutine.status",
+		"scope": "source.lua"
+	},	
+	"coroutine.wrap": {
+		"prefix": "coroutine.wrap",
+		"body": "coroutine.wrap( ${1:function} )",
+		"description": "coroutine.wrap",
+		"scope": "source.lua"
+	},
+	"coroutine.yield": {
+		"prefix": "coroutine.yield",
+		"body": "coroutine.yield( ${1:...} )",
+		"description": "coroutine.yield",
+		"scope": "source.lua"
+	}	
 }

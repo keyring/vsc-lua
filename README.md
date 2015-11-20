@@ -3,11 +3,12 @@
 
 ## Install
 
-![](images/install.png)
+![install](images/install.png)
 
 
 ## Usage
 
-![](images/usage.png)
+![usage](images/usage.png)
+
 
 ** Enjoy!**
