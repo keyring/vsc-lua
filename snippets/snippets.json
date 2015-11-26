@@ -35,12 +35,30 @@
 		"description": "local x = 1",
 		"scope": "source.lua"
 	},
+	"req": {
+		"prefix": "req",
+		"body": "require(\"${1:module}\")",
+		"description": "require()",
+		"scope": "source.lua"
+	},
 	"require": {
 		"prefix": "require",
 		"body": "require(\"${1:module}\")",
 		"description": "require()",
 		"scope": "source.lua"
 	},
+	"ver": {
+		"prefix": "ver",
+		"body": "_VERSION",
+		"description": "_VERSION",
+		"scope": "source.lua"
+	},	
+	"version": {
+		"prefix": "version",
+		"body": "_VERSION",
+		"description": "_VERSION",
+		"scope": "source.lua"
+	},	
 	"assert": {
 		"prefix": "assert",
 		"body": "assert(${1:v}${2:[, message]})",
@@ -380,5 +398,103 @@
 		"body": "coroutine.yield( ${1:...} )",
 		"description": "coroutine.yield",
 		"scope": "source.lua"
-	}	
+	},
+	
+	"debug.debug": {
+		"prefix": "debug.debug",
+		"body": "debug.debug()",
+		"description": "debug.debug ()",
+		"scope": "source.lua"
+	},
+	"debug.gethook": {
+		"prefix": "debug.gethook",
+		"body": "debug.gethook( ${1:[thread]} )",
+		"description": "debug.gethook ([thread])",
+		"scope": "source.lua"
+	},
+	"debug.getlocal": {
+		"prefix": "debug.getlocal",
+		"body": "debug.getlocal( ${1:[thread],}${2:f}${3:[, local]} )",
+		"description": "debug.getlocal ([thread,] f, local)",
+		"scope": "source.lua"
+	},
+	"debug.getinfo": {
+		"prefix": "debug.getinfo",
+		"body": "debug.getinfo( ${1:[thread],}${2:f}${3:[, what]} )",
+		"description": "debug.getinfo ([thread,] f [, what])",
+		"scope": "source.lua"
+	},
+	"debug.getmetatable": {
+		"prefix": "debug.getmetatable",
+		"body": "debug.getmetatable( ${1:value} )",
+		"description": "debug.getmetatable (value)",
+		"scope": "source.lua"
+	},
+	"debug.getregistry": {
+		"prefix": "debug.getregistry",
+		"body": "debug.getregistry()",
+		"description": "debug.getregistry ()",
+		"scope": "source.lua"
+	},
+	"debug.getupvalue": {
+		"prefix": "debug.getupvalue",
+		"body": "debug.getupvalue( ${1:f}, ${2:up} )",
+		"description": "debug.getupvalue (f, up)",
+		"scope": "source.lua"
+	},
+	"debug.getuservalue ": {
+		"prefix": "debug.getuservalue ",
+		"body": "debug.getuservalue ( ${1:u} )",
+		"description": "debug.getuservalue (u)",
+		"scope": "source.lua"
+	},
+	"debug.sethook": {
+		"prefix": "debug.sethook",
+		"body": "debug.sethook( ${1:[thead,]}${2:hook}, ${3:mask}${4:[, count]} )",
+		"description": "debug.sethook ([thread,] hook, mask [, count])",
+		"scope": "source.lua"
+	},
+	"debug.setlocal": {
+		"prefix": "debug.setlocal",
+		"body": "debug.setlocal( ${1:[thead,]}${2:level}, ${3:local}, ${4:value} )",
+		"description": "debug.setlocal ([thread,] level, local, value)",
+		"scope": "source.lua"
+	},
+	"debug.setmetatable": {
+		"prefix": "debug.setmetatable",
+		"body": "debug.setmetatable( ${1:value}, ${2:table} )",
+		"description": "debug.setmetatable (value, table)",
+		"scope": "source.lua"
+	},
+	"debug.setupvalue": {
+		"prefix": "debug.setupvalue",
+		"body": "debug.setupvalue( ${1:f}, ${2:up}, ${3:value} )",
+		"description": "debug.setupvalue (f, up, value)",
+		"scope": "source.lua"
+	},
+	"debug.setuservalue": {
+		"prefix": "debug.setuservalue",
+		"body": "debug.setuservalue( ${1:udata}, ${2:value} )",
+		"description": "debug.setuservalue (udata, value)",
+		"scope": "source.lua"
+	},
+	"debug.traceback": {
+		"prefix": "debug.traceback",
+		"body": "debug.traceback( ${1:[thread,]}${2:[message]}${3:[, level]} )",
+		"description": "debug.traceback ([thread,] [message [, level]])",
+		"scope": "source.lua"
+	},
+	"debug.upvalueid": {
+		"prefix": "debug.upvalueid",
+		"body": "debug.upvalueid( ${1:f}, ${2:n})",
+		"description": "debug.upvalueid (f, n)",
+		"scope": "source.lua"
+	},
+	"debug.upvaluejoin": {
+		"prefix": "debug.upvaluejoin",
+		"body": "debug.upvaluejoin( ${1:f1}, ${2:n1}, ${3:f2}, ${4:n2} )",
+		"description": "debug.upvaluejoin (f1, n1, f2, n2)",
+		"scope": "source.lua"
+	}
+	
 }
