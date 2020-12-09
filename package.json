@@ -1,8 +1,8 @@
 {
 	"name": "Lua",
 	"description": "Lua language support for Visual Studio Code",
-	"version": "0.0.9",
-	"publisher": "Maou",
+	"version": "0.0.10",
+	"publisher": "keyring",
 	"icon": "images/logo.png",
 	"license": "MIT",
 	"engines": {
